@@ -87,5 +87,10 @@ namespace EmployeeManagementSystem
         {
 
         }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmSettings());
+        }
     }
 }

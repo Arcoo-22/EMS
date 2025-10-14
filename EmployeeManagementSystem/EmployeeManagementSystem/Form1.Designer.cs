@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMotherForm));
             panel1 = new Panel();
+            btnSettings = new Button();
             btnAddEmp = new Button();
             btnMasterData = new Button();
             pnlTitleBar = new Panel();
@@ -50,23 +51,41 @@
             // panel1
             // 
             panel1.BackColor = Color.LightPink;
+            panel1.Controls.Add(btnSettings);
             panel1.Controls.Add(btnAddEmp);
             panel1.Controls.Add(btnMasterData);
             panel1.Dock = DockStyle.Left;
-            panel1.Location = new Point(0, 50);
+            panel1.Location = new Point(0, 67);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(224, 447);
+            panel1.Size = new Size(256, 596);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
+            // 
+            // btnSettings
+            // 
+            btnSettings.BackColor = SystemColors.GradientInactiveCaption;
+            btnSettings.Dock = DockStyle.Top;
+            btnSettings.Font = new Font("Sitka Display", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSettings.Location = new Point(0, 112);
+            btnSettings.Margin = new Padding(3, 4, 3, 4);
+            btnSettings.Name = "btnSettings";
+            btnSettings.Size = new Size(256, 56);
+            btnSettings.TabIndex = 2;
+            btnSettings.Text = "⛯      Settings";
+            btnSettings.TextAlign = ContentAlignment.MiddleLeft;
+            btnSettings.UseVisualStyleBackColor = false;
+            btnSettings.Click += btnSettings_Click;
             // 
             // btnAddEmp
             // 
             btnAddEmp.BackColor = SystemColors.GradientInactiveCaption;
             btnAddEmp.Dock = DockStyle.Top;
             btnAddEmp.Font = new Font("Sitka Display", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAddEmp.Location = new Point(0, 42);
+            btnAddEmp.Location = new Point(0, 56);
+            btnAddEmp.Margin = new Padding(3, 4, 3, 4);
             btnAddEmp.Name = "btnAddEmp";
-            btnAddEmp.Size = new Size(224, 42);
+            btnAddEmp.Size = new Size(256, 56);
             btnAddEmp.TabIndex = 1;
             btnAddEmp.Text = "👩🏻‍💼     Add Employee";
             btnAddEmp.TextAlign = ContentAlignment.MiddleLeft;
@@ -79,8 +98,9 @@
             btnMasterData.Dock = DockStyle.Top;
             btnMasterData.Font = new Font("Sitka Display", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMasterData.Location = new Point(0, 0);
+            btnMasterData.Margin = new Padding(3, 4, 3, 4);
             btnMasterData.Name = "btnMasterData";
-            btnMasterData.Size = new Size(224, 42);
+            btnMasterData.Size = new Size(256, 56);
             btnMasterData.TabIndex = 0;
             btnMasterData.Text = "👨🏻‍💻     Master Data";
             btnMasterData.TextAlign = ContentAlignment.MiddleLeft;
@@ -97,8 +117,9 @@
             pnlTitleBar.Controls.Add(btnMaximize);
             pnlTitleBar.Dock = DockStyle.Top;
             pnlTitleBar.Location = new Point(0, 0);
+            pnlTitleBar.Margin = new Padding(3, 4, 3, 4);
             pnlTitleBar.Name = "pnlTitleBar";
-            pnlTitleBar.Size = new Size(828, 50);
+            pnlTitleBar.Size = new Size(946, 67);
             pnlTitleBar.TabIndex = 1;
             pnlTitleBar.MouseDown += pnlTitleBar_MouseDown;
             // 
@@ -106,9 +127,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Sitka Display", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(60, 10);
+            label1.Location = new Point(69, 13);
             label1.Name = "label1";
-            label1.Size = new Size(290, 30);
+            label1.Size = new Size(369, 39);
             label1.TabIndex = 4;
             label1.Text = "Employee Management System";
             label1.Click += label1_Click;
@@ -116,9 +137,10 @@
             // btnMinimize
             // 
             btnMinimize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnMinimize.Location = new Point(713, 10);
+            btnMinimize.Location = new Point(815, 13);
+            btnMinimize.Margin = new Padding(3, 4, 3, 4);
             btnMinimize.Name = "btnMinimize";
-            btnMinimize.Size = new Size(31, 25);
+            btnMinimize.Size = new Size(35, 33);
             btnMinimize.TabIndex = 0;
             btnMinimize.Text = "➖";
             btnMinimize.UseVisualStyleBackColor = true;
@@ -128,9 +150,10 @@
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.InitialImage = null;
-            pictureBox1.Location = new Point(12, 4);
+            pictureBox1.Location = new Point(14, 5);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(42, 40);
+            pictureBox1.Size = new Size(48, 53);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
@@ -138,9 +161,10 @@
             // btnClose
             // 
             btnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnClose.Location = new Point(786, 10);
+            btnClose.Location = new Point(898, 13);
+            btnClose.Margin = new Padding(3, 4, 3, 4);
             btnClose.Name = "btnClose";
-            btnClose.Size = new Size(31, 25);
+            btnClose.Size = new Size(35, 33);
             btnClose.TabIndex = 2;
             btnClose.Text = "✖";
             btnClose.UseVisualStyleBackColor = true;
@@ -149,9 +173,10 @@
             // btnMaximize
             // 
             btnMaximize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnMaximize.Location = new Point(750, 10);
+            btnMaximize.Location = new Point(857, 13);
+            btnMaximize.Margin = new Padding(3, 4, 3, 4);
             btnMaximize.Name = "btnMaximize";
-            btnMaximize.Size = new Size(31, 25);
+            btnMaximize.Size = new Size(35, 33);
             btnMaximize.TabIndex = 1;
             btnMaximize.Text = "🗖";
             btnMaximize.UseVisualStyleBackColor = true;
@@ -161,21 +186,23 @@
             // 
             pnlStage.BackColor = SystemColors.Info;
             pnlStage.Dock = DockStyle.Fill;
-            pnlStage.Location = new Point(224, 50);
+            pnlStage.Location = new Point(256, 67);
+            pnlStage.Margin = new Padding(3, 4, 3, 4);
             pnlStage.Name = "pnlStage";
-            pnlStage.Size = new Size(604, 447);
+            pnlStage.Size = new Size(690, 596);
             pnlStage.TabIndex = 2;
             // 
             // frmMotherForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
-            ClientSize = new Size(828, 497);
+            ClientSize = new Size(946, 663);
             Controls.Add(pnlStage);
             Controls.Add(panel1);
             Controls.Add(pnlTitleBar);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frmMotherForm";
             Text = "Form1";
             Load += frmMotherForm_Load;
@@ -200,5 +227,6 @@
         private PictureBox pictureBox1;
         private BindingSource bindingSource1;
         private Label label1;
+        private Button btnSettings;
     }
 }

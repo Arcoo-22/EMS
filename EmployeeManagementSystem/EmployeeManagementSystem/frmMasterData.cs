@@ -17,6 +17,11 @@ namespace EmployeeManagementSystem
         {
             InitializeComponent();
         }
+        public void RefreshDataGrid(string query)
+        {
+            CRUD.CRUD.RETRIEVEDTG(dtgMasterData, query);
+        }
+
 
         private void lblMasterData_Click(object sender, EventArgs e)
         {
@@ -30,8 +35,7 @@ namespace EmployeeManagementSystem
 
         private void frmMasterData_Load(object sender, EventArgs e)
         {
-            string select_tblrequestorlist = "select * from tblEmployeeData ORDER BY EmployeeNumber DESC";
-            CRUD.CRUD.RETRIEVEDTG(dtgMasterData, select_tblrequestorlist);
+            Refresh();
         }
         public static string selectedTransaction, RequestorEmail, RequestorName, EmployeeNumber, Section, LocalNumber, cmbSection;
 
@@ -56,15 +60,20 @@ namespace EmployeeManagementSystem
             cmbSection = dtgMasterData.Rows[e.RowIndex].Cells["Section"].Value.ToString();
             LocalNumber = dtgMasterData.Rows[e.RowIndex].Cells["LocalNumber"].Value.ToString();
         }
+        public void Refresh()
+        {
+            string select_tblrequestorlist = "select * from tblEmployeeData ORDER BY EmployeeNumber DESC";
+            CRUD.CRUD.RETRIEVEDTG(dtgMasterData, select_tblrequestorlist);
+        }
 
         public static string TextBoxData;
         private void btnEditData_Click(object sender, EventArgs e)
         {
             TextBoxData = dtgMasterData.Text;
             frmAddEmployee DisplayfrmEmployee = new frmAddEmployee();
+            DisplayfrmEmployee.FormClosed += (s, args) => Refresh();
             DisplayfrmEmployee.ShowDialog();
-            this.Close();
-
+            this.Refresh();
         }
     }
 }

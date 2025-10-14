@@ -45,8 +45,9 @@
             pnlChildTitle.Controls.Add(lblMasterData);
             pnlChildTitle.Dock = DockStyle.Top;
             pnlChildTitle.Location = new Point(0, 0);
+            pnlChildTitle.Margin = new Padding(3, 4, 3, 4);
             pnlChildTitle.Name = "pnlChildTitle";
-            pnlChildTitle.Size = new Size(748, 50);
+            pnlChildTitle.Size = new Size(855, 67);
             pnlChildTitle.TabIndex = 0;
             pnlChildTitle.TabStop = true;
             pnlChildTitle.Paint += pnlChildTitle_Paint;
@@ -55,9 +56,9 @@
             // 
             lblMasterData.AutoSize = true;
             lblMasterData.Font = new Font("Sitka Display", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMasterData.Location = new Point(12, 9);
+            lblMasterData.Location = new Point(14, 12);
             lblMasterData.Name = "lblMasterData";
-            lblMasterData.Size = new Size(161, 30);
+            lblMasterData.Size = new Size(204, 39);
             lblMasterData.TabIndex = 0;
             lblMasterData.Text = "👨🏻‍💻  Master Data";
             lblMasterData.Click += lblMasterData_Click;
@@ -68,9 +69,11 @@
             dtgMasterData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgMasterData.Dock = DockStyle.Fill;
             dtgMasterData.EditMode = DataGridViewEditMode.EditProgrammatically;
-            dtgMasterData.Location = new Point(0, 50);
+            dtgMasterData.Location = new Point(0, 67);
+            dtgMasterData.Margin = new Padding(3, 4, 3, 4);
             dtgMasterData.Name = "dtgMasterData";
-            dtgMasterData.Size = new Size(748, 273);
+            dtgMasterData.RowHeadersWidth = 51;
+            dtgMasterData.Size = new Size(855, 363);
             dtgMasterData.TabIndex = 1;
             dtgMasterData.CellClick += dtgMasterData_CellClick;
             dtgMasterData.CellContentClick += dtgMasterData_CellContentClick;
@@ -78,10 +81,12 @@
             // 
             // btnEditData
             // 
+            btnEditData.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnEditData.Font = new Font("Sitka Display", 11.249999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEditData.Location = new Point(472, 334);
+            btnEditData.Location = new Point(733, 445);
+            btnEditData.Margin = new Padding(3, 4, 3, 4);
             btnEditData.Name = "btnEditData";
-            btnEditData.Size = new Size(91, 35);
+            btnEditData.Size = new Size(104, 47);
             btnEditData.TabIndex = 2;
             btnEditData.Text = "Edit Data";
             btnEditData.UseVisualStyleBackColor = true;
@@ -91,24 +96,25 @@
             // 
             lblTransactionNo.AutoSize = true;
             lblTransactionNo.Font = new Font("Sitka Display", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTransactionNo.Location = new Point(22, 340);
+            lblTransactionNo.Location = new Point(25, 453);
             lblTransactionNo.Name = "lblTransactionNo";
-            lblTransactionNo.Size = new Size(199, 23);
+            lblTransactionNo.Size = new Size(252, 29);
             lblTransactionNo.TabIndex = 3;
             lblTransactionNo.Text = "<TRANSACTION NUMBER>";
             // 
             // frmMasterData
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
-            ClientSize = new Size(748, 373);
+            ClientSize = new Size(855, 497);
             Controls.Add(lblTransactionNo);
             Controls.Add(btnEditData);
             Controls.Add(dtgMasterData);
             Controls.Add(pnlChildTitle);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frmMasterData";
-            Padding = new Padding(0, 0, 0, 50);
+            Padding = new Padding(0, 0, 0, 67);
             Text = "frmMasterData";
             Load += frmMasterData_Load;
             pnlChildTitle.ResumeLayout(false);

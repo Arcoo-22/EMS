@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
@@ -12,6 +13,8 @@ using System.Windows.Forms;
 namespace EmployeeManagementSystem
 {
     public partial class frmAddEmployee : Form
+
+
     {
         public frmAddEmployee()
         {
@@ -34,7 +37,7 @@ namespace EmployeeManagementSystem
             string EMS_data = string.Empty;
             EMS_data = "Select * from [tblEmployeeData] where EmployeeNumber = '" + txtEmpID.Text + "'";
             dtg_addrequestor = CRUD.CRUD.RETRIEVESINGLE(EMS_data);
-            
+
 
             if (string.IsNullOrEmpty(txtEmpID.Text) || string.IsNullOrEmpty(txtRequestorName.Text) || string.IsNullOrEmpty(txtEmailAddress.Text) || string.IsNullOrEmpty(cmbSection.Text) || string.IsNullOrEmpty(txtLocalNumber.Text))
             {
@@ -54,7 +57,8 @@ namespace EmployeeManagementSystem
                     string update_requestor = "Update [tblEmployeeData] set [RequestorName] = '" + txtRequestorName.Text + "', [RequestorEmail] = '" + txtEmailAddress.Text + "', [Section] = '" + cmbSection.Text + "', [LocalNumber] = '" + txtLocalNumber.Text + "' where [EmployeeNumber] = '" + txtEmpID.Text + "'";
                     CRUD.CRUD.CUD(update_requestor);
                     MessageBox.Show("Updated Succesfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                } else 
+                }
+                else
                 {
                     txtEmailAddress.Clear();
                     txtEmpID.Clear();
@@ -73,6 +77,7 @@ namespace EmployeeManagementSystem
                 CRUD.CRUD.CUD(add_requestor);
                 MessageBox.Show("Added Succesfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            this.Close();
 
         }
 
@@ -95,11 +100,44 @@ namespace EmployeeManagementSystem
             DialogResult result = MessageBox.Show("Do you really want to delete this data?", "Delete Data", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-                string delete_requestor = "DELETE * FROM [tblEmployeeData] WHERE ID = '" + frmMasterData.selectedTransaction + "'";
+                string delete_requestor = "DELETE * FROM [tblEmployeeData] WHERE ID = " + frmMasterData.selectedTransaction;
                 CRUD.CRUD.CUD(delete_requestor);
-                MessageBox.Show("Data has been deleted.", MessageBoxButtons.OK, MessageBoxIcons.Information);
+                MessageBox.Show("Data has been deleted.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string searchValue = btnSearch.Text.Trim();
+
+            if (string.IsNullOrEmpty(searchValue))
+            {
+                MessageBox.Show("Please enter a search term.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                try
+                {
+                    string query = "SELECT * FROM [tblEmployeeData] " +
+                                   "WHERE EmployeeNumber LIKE '%" + searchValue + "%' " +
+                                   "OR RequestorName LIKE '%" + searchValue + "%' " +
+                                   "OR RequestorEmail LIKE '%" + searchValue + "%' " +
+                                   "OR Section LIKE '%" + searchValue + "%' " +
+                                   "OR LocalNumber LIKE '%" + searchValue + "%'";
+
+                    frmMasterData dtg = new frmMasterData();
+                    dtg.RefreshDataGrid(query);
+
+                    MessageBox.Show("Search complete.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred while searching:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            this.Close();
+        }
     }
 }
+

@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\User0\\Desktop\\SCHOOL\\EMS\\EmployeeManagementSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{10B7D715-C955-4614-8257-E8F921A06ADB}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\user0\\desktop\\school\\ems\\employeemanagementsystem\\employeemanagementsystem\\frmloginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{10B7D715-C955-4614-8257-E8F921A06ADB}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\user0\\desktop\\school\\ems\\employeemanagementsystem\\employeemanagementsystem\\frmloginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10B7D715-C955-4614-8257-E8F921A06ADB}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\frmloginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10B7D715-C955-4614-8257-E8F921A06ADB}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|C:\\Users\\User0\\Desktop\\SCHOOL\\EMS\\EmployeeManagementSystem\\employeemanagementsystem\\frmloginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{10B7D715-C955-4614-8257-E8F921A06ADB}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\frmloginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -11,7 +15,7 @@
       "RelativeMoniker": "D:0:0:{10B7D715-C955-4614-8257-E8F921A06ADB}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\frmsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10B7D715-C955-4614-8257-E8F921A06ADB}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\user0\\desktop\\school\\ems\\employeemanagementsystem\\employeemanagementsystem\\frmsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{10B7D715-C955-4614-8257-E8F921A06ADB}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|C:\\Users\\User0\\Desktop\\SCHOOL\\EMS\\EmployeeManagementSystem\\employeemanagementsystem\\frmsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{10B7D715-C955-4614-8257-E8F921A06ADB}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\frmsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -42,11 +46,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "frmLoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\User0\\Desktop\\SCHOOL\\EMS\\EmployeeManagementSystem\\EmployeeManagementSystem\\frmLoginForm.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\frmLoginForm.cs",
+              "ToolTip": "C:\\Users\\User0\\Desktop\\SCHOOL\\EMS\\EmployeeManagementSystem\\EmployeeManagementSystem\\frmLoginForm.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\frmLoginForm.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAgwDAAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T03:32:08.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "frmSettings.cs",
               "DocumentMoniker": "C:\\Users\\User0\\Desktop\\SCHOOL\\EMS\\EmployeeManagementSystem\\EmployeeManagementSystem\\frmSettings.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\frmSettings.cs",
@@ -59,19 +76,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "frmSettings.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User0\\Desktop\\SCHOOL\\EMS\\EmployeeManagementSystem\\EmployeeManagementSystem\\frmSettings.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\frmSettings.cs",
               "ToolTip": "C:\\Users\\User0\\Desktop\\SCHOOL\\EMS\\EmployeeManagementSystem\\EmployeeManagementSystem\\frmSettings.cs [Design]",
               "RelativeToolTip": "EmployeeManagementSystem\\frmSettings.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-18T03:28:47.825Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-10-18T03:28:47.825Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "connection.cs",
               "DocumentMoniker": "C:\\Users\\User0\\Desktop\\SCHOOL\\EMS\\EmployeeManagementSystem\\EmployeeManagementSystem\\CRUD\\connection.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\CRUD\\connection.cs",
@@ -79,36 +95,33 @@
               "RelativeToolTip": "EmployeeManagementSystem\\CRUD\\connection.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-18T03:19:24.39Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-18T03:19:24.39Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "frmLoginForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User0\\Desktop\\SCHOOL\\EMS\\EmployeeManagementSystem\\EmployeeManagementSystem\\frmLoginForm.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\frmLoginForm.cs",
-              "ToolTip": "C:\\Users\\User0\\Desktop\\SCHOOL\\EMS\\EmployeeManagementSystem\\EmployeeManagementSystem\\frmLoginForm.cs [Design]*",
-              "RelativeToolTip": "EmployeeManagementSystem\\frmLoginForm.cs [Design]*",
+              "ToolTip": "C:\\Users\\User0\\Desktop\\SCHOOL\\EMS\\EmployeeManagementSystem\\EmployeeManagementSystem\\frmLoginForm.cs [Design]",
+              "RelativeToolTip": "EmployeeManagementSystem\\frmLoginForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-14T05:56:46.975Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-10-14T05:56:46.975Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "frmAddEmployee.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User0\\Desktop\\SCHOOL\\EMS\\EmployeeManagementSystem\\EmployeeManagementSystem\\frmAddEmployee.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\frmAddEmployee.cs",
               "ToolTip": "C:\\Users\\User0\\Desktop\\SCHOOL\\EMS\\EmployeeManagementSystem\\EmployeeManagementSystem\\frmAddEmployee.cs [Design]",
               "RelativeToolTip": "EmployeeManagementSystem\\frmAddEmployee.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T09:01:18.141Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-09-13T09:01:18.141Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "frmAddEmployee.cs",
               "DocumentMoniker": "C:\\Users\\User0\\Desktop\\SCHOOL\\EMS\\EmployeeManagementSystem\\EmployeeManagementSystem\\frmAddEmployee.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\frmAddEmployee.cs",
@@ -116,12 +129,11 @@
               "RelativeToolTip": "EmployeeManagementSystem\\frmAddEmployee.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAkwE0AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-20T08:21:26.656Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-20T08:21:26.656Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "frmMasterData.cs",
               "DocumentMoniker": "C:\\Users\\User0\\Desktop\\SCHOOL\\EMS\\EmployeeManagementSystem\\EmployeeManagementSystem\\frmMasterData.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\frmMasterData.cs",
@@ -134,15 +146,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "frmMasterData.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User0\\Desktop\\SCHOOL\\EMS\\EmployeeManagementSystem\\EmployeeManagementSystem\\frmMasterData.cs",
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\frmMasterData.cs",
               "ToolTip": "C:\\Users\\User0\\Desktop\\SCHOOL\\EMS\\EmployeeManagementSystem\\EmployeeManagementSystem\\frmMasterData.cs [Design]",
               "RelativeToolTip": "EmployeeManagementSystem\\frmMasterData.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T09:05:05.621Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-09-06T09:05:05.621Z"
             }
           ]
         }

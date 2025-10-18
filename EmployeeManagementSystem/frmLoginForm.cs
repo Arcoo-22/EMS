@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EmployeeManagementSystem.CRUD;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,8 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Collections.Specialized.BitVector32;
+using static System.Windows.Forms.DataFormats;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
-using EmployeeManagementSystem.CRUD;
 
 namespace EmployeeManagementSystem
 {
@@ -24,44 +26,45 @@ namespace EmployeeManagementSystem
         {
 
         }
-
+        public static string fullname, Section, Age;
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string Username = txtUsername.Text.Trim();
-            string Password = txtPassword.Text.Trim();
-            if (string.IsNullOrEmpty(Username) || string.IsNullOrEmpty(Password))
+            string username = txtUsername.Text.Trim();
+            string password = txtPassword.Text.Trim();
+            if (username == "" || password == "")
             {
-                MessageBox.Show("Please enter both username and password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter Username and Password.", "LOGIN",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            using (OleDbConnection conn = new OleDbConnection(connection.connString))
-            {
-                try
-                {
-                    conn.Open();
-                    string query = "SELECT COUNT(*) FROM tblLoginForm WHERE Username = ? AND Password = ?";
-                    using (OleDbCommand cmd = new OleDbCommand(query, conn))
-                    {
 
-                        cmd.Parameters.AddWithValue("?", Username);
-                        cmd.Parameters.AddWithValue("?", Password);
-                        int count = (int)cmd.ExecuteScalar();
-                        if (count > 0)
-                        {
-                            frmMotherForm DisplayMotherForm = new frmMotherForm();
-                            DisplayMotherForm.Show();
-                            this.Hide();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                }
-                catch (OleDbException ex)
-                {
-                    MessageBox.Show("Database error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+            // Query to validate login and fetch details
+            string sql = $"SELECT [FullName], [Section], [Age] FROM tblUsers WHERE Username='{username}' AND [Password]='{password}'";
+            bool isLogin = CRUD.CRUD.RETRIEVESINGLE(sql);
+
+
+            if (isLogin)
+            {
+                // Retrieve values from CRUD.dt since RETRIEVESINGLE fills it
+                fullname = CRUD.CRUD.dt.Rows[0]["FullName"].ToString();
+                Section = CRUD.CRUD.dt.Rows[0]["Section"].ToString();
+                Age = CRUD.CRUD.dt.Rows[0]["Age"].ToString();
+
+                MessageBox.Show(
+                    $"Welcome {fullname}",
+                    "LOGIN SUCCESS",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+
+                // Example: pass to Form1
+                this.Hide();
+                frmMotherForm main = new frmMotherForm();
+                main.Show();
+            }
+            else
+            {
+                MessageBox.Show("Invalid Username or Password", "LOGIN", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -32,6 +32,7 @@
             tpageUserRegistration = new TabPage();
             dgvUsers = new DataGridView();
             pnlSideBar = new Panel();
+            btnDownload = new Button();
             btnExecute = new Button();
             lblNumber = new Label();
             lblMatch = new Label();
@@ -89,9 +90,11 @@
             dgvUsers.Size = new Size(1039, 687);
             dgvUsers.TabIndex = 1;
             dgvUsers.CellContentClick += dgvUsers_CellContentClick;
+            dgvUsers.CellDoubleClick += dgvUsers_CellDoubleClick;
             // 
             // pnlSideBar
             // 
+            pnlSideBar.Controls.Add(btnDownload);
             pnlSideBar.Controls.Add(btnExecute);
             pnlSideBar.Controls.Add(lblNumber);
             pnlSideBar.Controls.Add(lblMatch);
@@ -113,9 +116,18 @@
             pnlSideBar.Size = new Size(289, 687);
             pnlSideBar.TabIndex = 0;
             // 
+            // btnDownload
+            // 
+            btnDownload.Location = new Point(175, 524);
+            btnDownload.Name = "btnDownload";
+            btnDownload.Size = new Size(94, 29);
+            btnDownload.TabIndex = 15;
+            btnDownload.Text = "Download";
+            btnDownload.UseVisualStyleBackColor = true;
+            // 
             // btnExecute
             // 
-            btnExecute.Location = new Point(178, 527);
+            btnExecute.Location = new Point(175, 564);
             btnExecute.Name = "btnExecute";
             btnExecute.Size = new Size(94, 29);
             btnExecute.TabIndex = 14;
@@ -150,6 +162,7 @@
             txtConfirmPassword.Name = "txtConfirmPassword";
             txtConfirmPassword.Size = new Size(242, 27);
             txtConfirmPassword.TabIndex = 11;
+            txtConfirmPassword.UseSystemPasswordChar = true;
             txtConfirmPassword.TextChanged += txtConfirmPassword_TextChanged;
             // 
             // lblConPass
@@ -168,6 +181,7 @@
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(242, 27);
             txtPassword.TabIndex = 9;
+            txtPassword.UseSystemPasswordChar = true;
             txtPassword.TextChanged += textBox1_TextChanged_1;
             // 
             // lblPassword
@@ -303,5 +317,6 @@
         private Label lblMatch;
         private TextBox txtConfirmPassword;
         private Label lblConPass;
+        private Button btnDownload;
     }
 }

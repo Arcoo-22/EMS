@@ -94,23 +94,39 @@ namespace EmployeeManagementSystem
 
             if (result == DialogResult.Yes)
             {
-                string query = "Insert into [Users] ([UserName], [Password],[Section],[Age], [FullName]) values ('" + txtUserName.Text + "','" + txtPassword.Text + "','" + cbSection.Text + "','" + txtAge.Text + "','" + txtFullName.Text + "')";
+                string query = "Insert into [tblUsers] ([UserName], [Password],[Section],[Age], [FullName]) values ('" + txtUserName.Text + "','" + txtPassword.Text + "','" + cbSection.Text + "','" + txtAge.Text + "','" + txtFullName.Text + "')";
                 CRUD.CRUD.CUD(query);
                 MessageBox.Show("Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                CRUD.CRUD.RETRIEVEDTG(dgvUsers, "Select * From [Users] ");
+                CRUD.CRUD.RETRIEVEDTG(dgvUsers, "Select * From [tblUsers] ");
             }
         }
 
         private void frmSettings_Load(object sender, EventArgs e)
         {
             CRUD.CRUD.RETRIEVECBO(cbSection, "SELECT [ID], [Section] FROM [tblSection] ORDER BY [Section] asc", "Section", "ID");
-            CRUD.CRUD.RETRIEVEDTG(dgvUsers, "Select * From [Users]");
+            CRUD.CRUD.RETRIEVEDTG(dgvUsers, "Select * From [tblUsers]");
 
             lblNumber.Text = "❌ Number";
             lblNumber.ForeColor = Color.Red;
 
             lblMatch.Text = "✓ Green";
             lblMatch.ForeColor = Color.Green;
+        }
+
+        private void dgvUsers_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string TemplatePath = @"C:\Users\User0\Downloads\Employee_Details_Template.xlsx";
+            string SavePath = @"C:\Users\User0\Downloads\Employee_Details_Template.xlsx";
+
+            ExportCellFromDgv.ExportFromTemplate(TemplatePath,
+        SavePath,
+        "B1", dgvUsers.Rows[e.RowIndex].Cells["FullName"].Value,
+        "H1", dgvUsers.Rows[e.RowIndex].Cells["Section"].Value,
+        "B2", dgvUsers.Rows[e.RowIndex].Cells["Username"].Value,
+        "H2", dgvUsers.Rows[e.RowIndex].Cells["Age"].Value,
+        "A32", frmLoginForm.fullname,
+        "A33", DateTime.Now.ToString("yyyy-MM-dd")
+    );
         }
     }
 }

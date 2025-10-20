@@ -138,6 +138,12 @@ namespace EmployeeManagementSystem
             }
             this.Close();
         }
+
+        private void cmbSection_DropDown(object sender, EventArgs e)
+        {
+            string sql = "SELECT Section FROM tblSection";
+            CRUD.CRUD.RETRIEVECBO(cmbSection, sql, "Section", "Section");
+        }
     }
 }
 

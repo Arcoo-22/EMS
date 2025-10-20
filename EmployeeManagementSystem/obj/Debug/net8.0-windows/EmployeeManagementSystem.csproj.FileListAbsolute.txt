@@ -125,3 +125,4 @@ C:\Users\User0\Desktop\SCHOOL\EMS\EmployeeManagementSystem\EmployeeManagementSys
 C:\Users\User0\Desktop\SCHOOL\EMS\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\net8.0-windows\EmployeeManagementSystem.frmSettings.resources
 C:\Users\User0\Desktop\SCHOOL\EMS\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\net8.0-windows\EmployeeManagementSystem.frmLoginForm.resources
 C:\Users\User0\Desktop\SCHOOL\EMS\EmployeeManagementSystem\EmployeeManagementSystem\bin\Debug\net8.0-windows\Microsoft.Office.Interop.Excel.dll
+C:\Users\User0\Desktop\SCHOOL\EMS\EmployeeManagementSystem\EmployeeManagementSystem\bin\Debug\net8.0-windows\Microsoft.Office.Interop.Access.dll

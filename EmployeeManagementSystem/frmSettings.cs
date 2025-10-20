@@ -128,5 +128,15 @@ namespace EmployeeManagementSystem
         "A33", DateTime.Now.ToString("yyyy-MM-dd")
     );
         }
+
+        private void btnDownload_Click(object sender, EventArgs e)
+        {
+            ExportDgv.ExportToExcel(dgvUsers, "ExportedData_" + DateTime.Now.ToString("MM-dd-yyyy"));
+        }
+
+        private void lblMatch_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

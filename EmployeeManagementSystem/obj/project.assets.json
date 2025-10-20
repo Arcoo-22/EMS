@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "net8.0-windows7.0": {
+      "Microsoft.Office.Interop.Access/15.0.4420.1018": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Office.Interop.Access.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Office.Interop.Access.dll": {}
+        }
+      },
       "Microsoft.Office.Interop.Excel/16.0.18925.20022": {
         "type": "package",
         "compile": {
@@ -127,6 +136,19 @@
     }
   },
   "libraries": {
+    "Microsoft.Office.Interop.Access/15.0.4420.1018": {
+      "sha512": "toqhe19vn4/HLJrAiCYMSO2NPGSTBjSQ+o9j7gNBnVo//2cDxD61s3Rb0FdOMnPMxX8NTRiNhDju4KOuIE39rA==",
+      "type": "package",
+      "path": "microsoft.office.interop.access/15.0.4420.1018",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/Microsoft.Office.Interop.Access.dll",
+        "lib/netstandard2.0/Microsoft.Office.Interop.Access.dll",
+        "microsoft.office.interop.access.15.0.4420.1018.nupkg.sha512",
+        "microsoft.office.interop.access.nuspec"
+      ]
+    },
     "Microsoft.Office.Interop.Excel/16.0.18925.20022": {
       "sha512": "Wlhtqu3QfLnDRHc77bJewv5k27VASgcINA3eDAljfZQX9iTuM+12Mt7EJYZpxn+2gBw9dlK7q6riUxuXd4cviw==",
       "type": "package",
@@ -306,6 +328,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
+      "Microsoft.Office.Interop.Access >= 15.0.4420.1018",
       "Microsoft.Office.Interop.Excel >= 16.0.18925.20022",
       "System.Data.OleDb >= 9.0.8"
     ]
@@ -361,6 +384,10 @@
       "net8.0-windows7.0": {
         "targetAlias": "net8.0-windows",
         "dependencies": {
+          "Microsoft.Office.Interop.Access": {
+            "target": "Package",
+            "version": "[15.0.4420.1018, )"
+          },
           "Microsoft.Office.Interop.Excel": {
             "target": "Package",
             "version": "[16.0.18925.20022, )"

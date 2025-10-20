@@ -118,16 +118,17 @@
             // 
             // btnDownload
             // 
-            btnDownload.Location = new Point(175, 524);
+            btnDownload.Location = new Point(16, 522);
             btnDownload.Name = "btnDownload";
             btnDownload.Size = new Size(94, 29);
             btnDownload.TabIndex = 15;
             btnDownload.Text = "Download";
             btnDownload.UseVisualStyleBackColor = true;
+            btnDownload.Click += btnDownload_Click;
             // 
             // btnExecute
             // 
-            btnExecute.Location = new Point(175, 564);
+            btnExecute.Location = new Point(160, 522);
             btnExecute.Name = "btnExecute";
             btnExecute.Size = new Size(94, 29);
             btnExecute.TabIndex = 14;
@@ -139,7 +140,7 @@
             // 
             lblNumber.AutoSize = true;
             lblNumber.Font = new Font("Sitka Display", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblNumber.Location = new Point(39, 499);
+            lblNumber.Location = new Point(36, 482);
             lblNumber.Name = "lblNumber";
             lblNumber.Size = new Size(74, 21);
             lblNumber.TabIndex = 13;
@@ -150,15 +151,16 @@
             // 
             lblMatch.AutoSize = true;
             lblMatch.Font = new Font("Sitka Display", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblMatch.Location = new Point(39, 478);
+            lblMatch.Location = new Point(36, 461);
             lblMatch.Name = "lblMatch";
             lblMatch.Size = new Size(63, 21);
             lblMatch.TabIndex = 12;
             lblMatch.Text = "✓ Match";
+            lblMatch.Click += lblMatch_Click;
             // 
             // txtConfirmPassword
             // 
-            txtConfirmPassword.Location = new Point(15, 448);
+            txtConfirmPassword.Location = new Point(15, 426);
             txtConfirmPassword.Name = "txtConfirmPassword";
             txtConfirmPassword.Size = new Size(242, 27);
             txtConfirmPassword.TabIndex = 11;
@@ -169,7 +171,7 @@
             // 
             lblConPass.AutoSize = true;
             lblConPass.Font = new Font("Sitka Display", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblConPass.Location = new Point(15, 414);
+            lblConPass.Location = new Point(15, 392);
             lblConPass.Name = "lblConPass";
             lblConPass.Size = new Size(153, 21);
             lblConPass.TabIndex = 10;
@@ -177,7 +179,7 @@
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(15, 384);
+            txtPassword.Location = new Point(15, 335);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(242, 27);
             txtPassword.TabIndex = 9;
@@ -188,7 +190,7 @@
             // 
             lblPassword.AutoSize = true;
             lblPassword.Font = new Font("Sitka Display", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblPassword.Location = new Point(15, 349);
+            lblPassword.Location = new Point(15, 311);
             lblPassword.Name = "lblPassword";
             lblPassword.Size = new Size(68, 21);
             lblPassword.TabIndex = 8;
@@ -196,7 +198,7 @@
             // 
             // txtAge
             // 
-            txtAge.Location = new Point(15, 319);
+            txtAge.Location = new Point(15, 267);
             txtAge.Name = "txtAge";
             txtAge.Size = new Size(242, 27);
             txtAge.TabIndex = 7;
@@ -207,7 +209,7 @@
             // 
             lblAge.AutoSize = true;
             lblAge.Font = new Font("Sitka Display", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblAge.Location = new Point(15, 284);
+            lblAge.Location = new Point(15, 243);
             lblAge.Name = "lblAge";
             lblAge.Size = new Size(31, 21);
             lblAge.TabIndex = 6;
@@ -216,7 +218,7 @@
             // cbSection
             // 
             cbSection.FormattingEnabled = true;
-            cbSection.Location = new Point(15, 253);
+            cbSection.Location = new Point(15, 201);
             cbSection.Name = "cbSection";
             cbSection.Size = new Size(239, 28);
             cbSection.TabIndex = 5;
@@ -225,7 +227,7 @@
             // 
             lblSection.AutoSize = true;
             lblSection.Font = new Font("Sitka Display", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblSection.Location = new Point(15, 215);
+            lblSection.Location = new Point(15, 174);
             lblSection.Name = "lblSection";
             lblSection.Size = new Size(58, 24);
             lblSection.TabIndex = 4;
@@ -234,7 +236,7 @@
             // 
             // txtFullName
             // 
-            txtFullName.Location = new Point(12, 185);
+            txtFullName.Location = new Point(12, 125);
             txtFullName.Name = "txtFullName";
             txtFullName.Size = new Size(242, 27);
             txtFullName.TabIndex = 3;
@@ -243,7 +245,7 @@
             // 
             lblFullName.AutoSize = true;
             lblFullName.Font = new Font("Sitka Display", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblFullName.Location = new Point(15, 148);
+            lblFullName.Location = new Point(12, 98);
             lblFullName.Name = "lblFullName";
             lblFullName.Size = new Size(78, 24);
             lblFullName.TabIndex = 2;
@@ -251,7 +253,7 @@
             // 
             // txtUserName
             // 
-            txtUserName.Location = new Point(12, 118);
+            txtUserName.Location = new Point(12, 55);
             txtUserName.Name = "txtUserName";
             txtUserName.Size = new Size(242, 27);
             txtUserName.TabIndex = 1;
@@ -261,7 +263,7 @@
             // 
             lblUserName.AutoSize = true;
             lblUserName.Font = new Font("Sitka Display", 10.1999989F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblUserName.Location = new Point(12, 80);
+            lblUserName.Location = new Point(12, 28);
             lblUserName.Name = "lblUserName";
             lblUserName.Size = new Size(81, 24);
             lblUserName.TabIndex = 0;

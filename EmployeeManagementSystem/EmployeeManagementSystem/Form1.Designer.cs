@@ -30,44 +30,79 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMotherForm));
-            panel1 = new Panel();
+            pnlSideBar = new Panel();
+            lblsection1 = new Label();
+            lblAge = new Label();
+            lblUsername = new Label();
             btnSettings = new Button();
             btnAddEmp = new Button();
             btnMasterData = new Button();
             pnlTitleBar = new Panel();
-            label1 = new Label();
+            lblSection = new Label();
             btnMinimize = new Button();
             pictureBox1 = new PictureBox();
             btnClose = new Button();
             btnMaximize = new Button();
             pnlStage = new Panel();
             bindingSource1 = new BindingSource(components);
-            panel1.SuspendLayout();
+            pnlSideBar.SuspendLayout();
             pnlTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
             SuspendLayout();
             // 
-            // panel1
+            // pnlSideBar
             // 
-            panel1.BackColor = Color.LightPink;
-            panel1.Controls.Add(btnSettings);
-            panel1.Controls.Add(btnAddEmp);
-            panel1.Controls.Add(btnMasterData);
-            panel1.Dock = DockStyle.Left;
-            panel1.Location = new Point(0, 67);
-            panel1.Margin = new Padding(3, 4, 3, 4);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(256, 596);
-            panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
+            pnlSideBar.BackColor = Color.LightPink;
+            pnlSideBar.Controls.Add(lblsection1);
+            pnlSideBar.Controls.Add(lblAge);
+            pnlSideBar.Controls.Add(lblUsername);
+            pnlSideBar.Controls.Add(btnSettings);
+            pnlSideBar.Controls.Add(btnAddEmp);
+            pnlSideBar.Controls.Add(btnMasterData);
+            pnlSideBar.Dock = DockStyle.Left;
+            pnlSideBar.Location = new Point(0, 67);
+            pnlSideBar.Margin = new Padding(3, 4, 3, 4);
+            pnlSideBar.Name = "pnlSideBar";
+            pnlSideBar.Size = new Size(256, 596);
+            pnlSideBar.TabIndex = 0;
+            pnlSideBar.Paint += panel1_Paint;
+            // 
+            // lblsection1
+            // 
+            lblsection1.AutoSize = true;
+            lblsection1.Font = new Font("Sitka Display", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblsection1.Location = new Point(28, 76);
+            lblsection1.Name = "lblsection1";
+            lblsection1.Size = new Size(117, 29);
+            lblsection1.TabIndex = 6;
+            lblsection1.Text = "<SECTION>";
+            // 
+            // lblAge
+            // 
+            lblAge.AutoSize = true;
+            lblAge.Font = new Font("Sitka Display", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblAge.Location = new Point(28, 120);
+            lblAge.Name = "lblAge";
+            lblAge.Size = new Size(74, 29);
+            lblAge.TabIndex = 5;
+            lblAge.Text = "<AGE>";
+            // 
+            // lblUsername
+            // 
+            lblUsername.AutoSize = true;
+            lblUsername.Font = new Font("Sitka Display", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblUsername.Location = new Point(28, 27);
+            lblUsername.Name = "lblUsername";
+            lblUsername.Size = new Size(159, 33);
+            lblUsername.TabIndex = 4;
+            lblUsername.Text = "<USERNAME>";
             // 
             // btnSettings
             // 
             btnSettings.BackColor = SystemColors.GradientInactiveCaption;
-            btnSettings.Dock = DockStyle.Top;
             btnSettings.Font = new Font("Sitka Display", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSettings.Location = new Point(0, 112);
+            btnSettings.Location = new Point(0, 281);
             btnSettings.Margin = new Padding(3, 4, 3, 4);
             btnSettings.Name = "btnSettings";
             btnSettings.Size = new Size(256, 56);
@@ -80,9 +115,8 @@
             // btnAddEmp
             // 
             btnAddEmp.BackColor = SystemColors.GradientInactiveCaption;
-            btnAddEmp.Dock = DockStyle.Top;
             btnAddEmp.Font = new Font("Sitka Display", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAddEmp.Location = new Point(0, 56);
+            btnAddEmp.Location = new Point(0, 225);
             btnAddEmp.Margin = new Padding(3, 4, 3, 4);
             btnAddEmp.Name = "btnAddEmp";
             btnAddEmp.Size = new Size(256, 56);
@@ -95,9 +129,8 @@
             // btnMasterData
             // 
             btnMasterData.BackColor = SystemColors.GradientInactiveCaption;
-            btnMasterData.Dock = DockStyle.Top;
             btnMasterData.Font = new Font("Sitka Display", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnMasterData.Location = new Point(0, 0);
+            btnMasterData.Location = new Point(0, 169);
             btnMasterData.Margin = new Padding(3, 4, 3, 4);
             btnMasterData.Name = "btnMasterData";
             btnMasterData.Size = new Size(256, 56);
@@ -110,7 +143,7 @@
             // pnlTitleBar
             // 
             pnlTitleBar.BackColor = Color.LightPink;
-            pnlTitleBar.Controls.Add(label1);
+            pnlTitleBar.Controls.Add(lblSection);
             pnlTitleBar.Controls.Add(btnMinimize);
             pnlTitleBar.Controls.Add(pictureBox1);
             pnlTitleBar.Controls.Add(btnClose);
@@ -123,16 +156,16 @@
             pnlTitleBar.TabIndex = 1;
             pnlTitleBar.MouseDown += pnlTitleBar_MouseDown;
             // 
-            // label1
+            // lblSection
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Sitka Display", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(69, 13);
-            label1.Name = "label1";
-            label1.Size = new Size(369, 39);
-            label1.TabIndex = 4;
-            label1.Text = "Employee Management System";
-            label1.Click += label1_Click;
+            lblSection.AutoSize = true;
+            lblSection.Font = new Font("Sitka Display", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSection.Location = new Point(69, 13);
+            lblSection.Name = "lblSection";
+            lblSection.Size = new Size(369, 39);
+            lblSection.TabIndex = 4;
+            lblSection.Text = "Employee Management System";
+            lblSection.Click += label1_Click;
             // 
             // btnMinimize
             // 
@@ -199,14 +232,15 @@
             BackColor = SystemColors.GradientInactiveCaption;
             ClientSize = new Size(946, 663);
             Controls.Add(pnlStage);
-            Controls.Add(panel1);
+            Controls.Add(pnlSideBar);
             Controls.Add(pnlTitleBar);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
             Name = "frmMotherForm";
             Text = "Form1";
             Load += frmMotherForm_Load;
-            panel1.ResumeLayout(false);
+            pnlSideBar.ResumeLayout(false);
+            pnlSideBar.PerformLayout();
             pnlTitleBar.ResumeLayout(false);
             pnlTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -216,7 +250,7 @@
 
         #endregion
 
-        private Panel panel1;
+        private Panel pnlSideBar;
         private Panel pnlTitleBar;
         private Button btnClose;
         private Button btnMaximize;
@@ -226,7 +260,10 @@
         private Panel pnlStage;
         private PictureBox pictureBox1;
         private BindingSource bindingSource1;
-        private Label label1;
+        private Label lblSection;
         private Button btnSettings;
+        private Label lblsection1;
+        private Label lblAge;
+        private Label lblUsername;
     }
 }

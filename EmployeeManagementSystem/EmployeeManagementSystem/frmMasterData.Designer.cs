@@ -101,6 +101,7 @@
             lblTransactionNo.Size = new Size(252, 29);
             lblTransactionNo.TabIndex = 3;
             lblTransactionNo.Text = "<TRANSACTION NUMBER>";
+            lblTransactionNo.Click += lblTransactionNo_Click;
             // 
             // frmMasterData
             // 

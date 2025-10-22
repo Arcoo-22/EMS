@@ -41,8 +41,8 @@ namespace EmployeeManagementSystem
 
         private void dtgMasterData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-            
+
+
         }
 
         private void dtgMasterData_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -74,6 +74,11 @@ namespace EmployeeManagementSystem
             DisplayfrmEmployee.FormClosed += (s, args) => Refresh();
             DisplayfrmEmployee.ShowDialog();
             this.Refresh();
+        }
+
+        private void lblTransactionNo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

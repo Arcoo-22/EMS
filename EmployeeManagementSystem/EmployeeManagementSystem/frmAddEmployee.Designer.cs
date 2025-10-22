@@ -168,6 +168,7 @@
             cmbSection.Name = "cmbSection";
             cmbSection.Size = new Size(223, 29);
             cmbSection.TabIndex = 5;
+            cmbSection.DropDown += cmbSection_DropDown;
             cmbSection.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label6

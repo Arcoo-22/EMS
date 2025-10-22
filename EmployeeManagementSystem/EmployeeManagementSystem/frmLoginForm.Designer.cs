@@ -34,6 +34,7 @@
             txtUsername = new TextBox();
             txtPassword = new TextBox();
             btnLogin = new Button();
+            linklblCreate = new LinkLabel();
             SuspendLayout();
             // 
             // lblEMS
@@ -95,11 +96,25 @@
             btnLogin.UseVisualStyleBackColor = true;
             btnLogin.Click += btnLogin_Click;
             // 
+            // linklblCreate
+            // 
+            linklblCreate.AutoSize = true;
+            linklblCreate.Font = new Font("Sitka Display", 10.8F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            linklblCreate.LinkColor = Color.RoyalBlue;
+            linklblCreate.Location = new Point(579, 394);
+            linklblCreate.Name = "linklblCreate";
+            linklblCreate.Size = new Size(144, 26);
+            linklblCreate.TabIndex = 6;
+            linklblCreate.TabStop = true;
+            linklblCreate.Text = "Create an account?";
+            linklblCreate.LinkClicked += linklblCreate_LinkClicked;
+            // 
             // frmLoginForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(linklblCreate);
             Controls.Add(btnLogin);
             Controls.Add(txtPassword);
             Controls.Add(txtUsername);
@@ -120,5 +135,6 @@
         private TextBox txtUsername;
         private TextBox txtPassword;
         private Button btnLogin;
+        private LinkLabel linklblCreate;
     }
 }

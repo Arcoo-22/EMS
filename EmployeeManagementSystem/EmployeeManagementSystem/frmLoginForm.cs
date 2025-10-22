@@ -77,5 +77,13 @@ namespace EmployeeManagementSystem
         {
 
         }
+
+        private void linklblCreate_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmSettings settingsForm = new frmSettings();
+            settingsForm.ShowOnlyRegistration = true; 
+            settingsForm.Show();
+            this.Hide();
+        }
     }
 }
